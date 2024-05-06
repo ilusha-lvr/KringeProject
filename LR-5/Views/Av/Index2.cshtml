@@ -1,0 +1,26 @@
+﻿@page
+@model LR_5.Models.Moto
+@{
+    <div class="text-center">
+            <h1 class="display-4">Изменение данных:</h1>      
+            <form method="post">
+                <label>Номер:</label><br />
+                <input type="number" , name="code" value="" /><br /><br />
+                <label>Марка:</label><br />
+                <input type="text" , name="mark" /><br /><br />
+                <label>Модель:</label><br />
+                <input type="text" , name="model" /><br /><br />
+                <label>Год выпуска:</label><br />
+                <input type="number" , name="year" /><br /><br />
+                <label>Объем(куб. см.):</label><br />
+                <input type="number" , name="volume" /><br /><br />
+                <label>Мощность(л. с.):</label><br />
+                <input type="number" , name="VP" /><br /><br />
+                <label>Страна:</label><br />
+                <input type="text" , name="country" /><br /><br />
+                <label>Цена:</label><br />
+                <input type="number" , name="cost" /><br /><br />
+                <input type="submit" , value="Изменить" />
+            </form>
+    </div>
+}

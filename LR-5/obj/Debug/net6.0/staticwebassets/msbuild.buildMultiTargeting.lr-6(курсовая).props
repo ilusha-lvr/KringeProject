@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\lr-6(курсовая).props" />
+</Project>

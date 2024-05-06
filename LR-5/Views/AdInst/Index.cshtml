@@ -1,0 +1,66 @@
+﻿@model List<Instruct>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Список инструкторов</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4">Список инструкторов</h1>
+        <h4><a asp-action="Create" class="btn btn-primary">Добавить инструктора</a></h4>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Фамилия</th>
+                        <th>Имя</th>
+                        <th>Отчество</th>
+                        <th>Пол</th>
+                        <th>Дата рождения</th>
+                        <th>Город</th>
+                        <th>Улица</th>
+                        <th>Дом</th>
+                        <th>Квартира</th>
+                        <th>Номер паспорта</th>
+                        <th>Серия паспорта</th>
+                        <th>Изменить запись</th>
+                        <th>Удалить запись</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var instructor in Model)
+                    {
+                        <tr>
+                            <td>@instructor.SurnameI</td>
+                            <td>@instructor.NameI</td>
+                            <td>@instructor.Otchestvo</td>
+                            <td>@instructor.Gender</td>
+                            <td>@instructor.DateB</td>
+                            <td>@instructor.City</td>
+                            <td>@instructor.Street</td>
+                            <td>@instructor.House</td>
+                            <td>@instructor.Flat</td>
+                            <td>@instructor.PassNom</td>
+                            <td>@instructor.PassSerial</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@instructor.InstId" class="btn btn-info">Изменить</a>
+                            </td>
+                            <td>
+                                <form asp-controller="AdInst" asp-action="Delete" method="post" asp-route-id="@instructor.InstId">
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Вы точно хотите удалить запись?')">Удалить</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

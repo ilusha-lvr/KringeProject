@@ -1,0 +1,173 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LR_5
+build_property.RootNamespace = LR_5
+build_property.ProjectDir = C:\Users\Илья\Desktop\LR-5\LR-5\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Илья\Desktop\LR-5\LR-5
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Account/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdCar/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRDYXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdCar/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRDYXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdCar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRDYXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdCar/ViewImage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRDYXJcVmlld0ltYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdInst/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRJbnN0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdInst/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRJbnN0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdInst/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRJbnN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdStud/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRTdHVkXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdStud/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRTdHVkXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdStud/EditM.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRTdHVkXEVkaXRNLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdStud/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRTdHVkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdStud/IndexM.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRTdHVkXEluZGV4TS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdUser/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRVc2VyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdUser/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRVc2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/AdUser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRVc2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Av/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Av/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Av/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Group/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Group/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Group/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Lessons/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Lessons/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Lessons/IndexM.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xJbmRleE0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/ListG/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdEdcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/ListG/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdEdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Shared/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Teory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Teory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Teory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Илья/Desktop/LR-5/LR-5/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-hzs3op3ney

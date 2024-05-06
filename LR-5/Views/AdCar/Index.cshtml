@@ -1,0 +1,67 @@
+﻿@model List<Car>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Список автомобилей</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="display-4">Список автомобилей</h1>
+        <h4><a asp-action="Create" class="btn btn-primary">Добавить запись</a></h4>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Марка</th>
+                    <th>Модель</th>
+                    <th>Тип кузова</th>
+                    <th>Тип КПП</th>
+                    <th>Фото</th>
+                    <th>Внесение изменений</th>
+                    <th>Удаление записи</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var car in Model)
+                {
+                    <tr>
+                        <td>@car.CarId</td>
+                        <td>@car.Brand</td>
+                        <td>@car.Model</td>
+                        <td>@car.TypeC</td>
+                        <td>@car.TypeKpp</td>
+                        <td>
+                            @if (car.Img != null)
+                            {
+                                <a asp-action="ViewImage" asp-controller="AdCar" asp-route-carId="@car.CarId">Просмотр</a>
+                            }
+                            else
+                            {
+                                <span>Нет изображения</span>
+                            }
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@car.CarId" class="btn btn-info">Изменить</a>
+                        </td>
+                        <td>
+                            <form asp-controller="AdCar" asp-action="Delete" method="post" asp-route-id="@car.CarId">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Вы точно хотите удалить запись?')">Удалить</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

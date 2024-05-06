@@ -1,0 +1,23 @@
+﻿@model LR_5.Models.StudAddGroup
+
+<h1>Добавить учащегося в группу</h1>
+
+<form asp-controller="ListG" asp-action="AddStudentToGroup" method="post">
+    <div class="form-group">
+        <label asp-for="SelectedGroupId">Выберите группу:</label>
+        <select asp-for="SelectedGroupId" class="form-control" asp-items="@Model.Groups">
+            <option value="" selected>Выберите значение</option>
+        </select>
+        <span asp-validation-for="SelectedGroupId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SelectedStudentId">Выберите учащегося:</label>
+        <select asp-for="SelectedStudentId" class="form-control" asp-items="@Model.Students">
+            <option value="" selected>Выберите значение</option>
+        </select>
+        <span asp-validation-for="SelectedStudentId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Добавить</button>
+</form>

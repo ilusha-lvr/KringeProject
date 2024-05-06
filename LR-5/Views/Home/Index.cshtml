@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Главная страница";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Bootstrap цвет фона по умолчанию */
+            padding-top: 5%;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin-top: 0px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container login-container">
+        <div class="text-center">
+            <h1 class="display-4">Добро пожаловать в автошколу!</h1>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <p>Добро пожаловать, @User.Identity.Name!</p>
+                <form method="post" asp-controller="Account" asp-action="Logout">
+                    <button type="submit" class="btn btn-danger">Выход</button>
+                </form>
+            }
+            else
+            {
+                <p>Чтобы продолжить, авторизуйтесь.</p>
+                <a href="/Account/Login" class="btn btn-primary">Авторизоваться</a>
+            }
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+﻿@model LR_5.Models.RecCreateViewModel
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .display-4 {
+        color: #007bff;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+</style>
+
+<h1 class="display-4">Добавить запись</h1>
+
+<form asp-action="Create" method="post" class="container">
+    <div class="form-group">
+        <label asp-for="InstId">Инструктор</label>
+        <select asp-for="InstId" class="form-control">
+            @foreach (var instructor in ViewBag.Instructors as List<Instruct>)
+            {
+                <option value="@instructor.InstId">@instructor.SurnameI @instructor.NameI @instructor.Otchestvo</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="StudId">Студент</label>
+        <select asp-for="StudId" class="form-control">
+            @foreach (var student in ViewBag.Students as List<Stud>)
+            {
+                <option value="@student.StudId">@student.Surname @student.NameS @student.Otchestvo</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CarId">Машина</label>
+        <select asp-for="CarId" class="form-control">
+            @foreach (var car in ViewBag.Cars as List<Car>)
+            {
+                <option value="@car.CarId">@car.Brand @car.Model</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateL">Дата</label>
+        <input asp-for="DateL" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TimeL">Время</label>
+        <input asp-for="TimeL" type="time" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Создать запись</button>
+</form>

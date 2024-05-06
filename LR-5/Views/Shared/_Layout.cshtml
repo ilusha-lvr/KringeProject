@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Автошкола</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LR_5.styles.css" asp-append-version="true" />
+     <style>
+            .navbar {
+                margin-bottom: 0;
+            }
+
+            body {
+                padding-top: 56px; 
+            }
+        </style>
+    <style>
+        body {
+            padding-top: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-image: url('/back.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-top: 0;
+            color: #ffffff; 
+            padding: 20px 0; 
+            text-align: center;
+           
+        }
+
+        .navbar {
+            padding: 14px 0;
+        }
+
+        main {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 0px;
+        }
+
+        footer {
+            padding: 20px 0;
+            background-color: #f8f9fa;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            
+                            @if (User.IsInRole("admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="AdInst" asp-action="Index">Просмотр инструкторов</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="AdStud" asp-action="Index">Просмотр учеников</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="AdUser" asp-action="Index">Просмотр пользователей</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="AdCar" asp-action="Index">Просмотр автопарка</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Av" asp-action="Index">Просмотр занятий</a>
+                                </li>
+                            }
+                            else if (User.IsInRole("metod"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Av" asp-action="Index">Просмотр занятий</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="AdStud" asp-action="IndexM">Просмотр учеников</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Group" asp-action="Index">Просмотр групп</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="ListG" asp-action="Index">Просмотр учеников группы</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Teory" asp-action="Index">Просмотр теоретических занятий</a>
+                                </li>
+                            }
+                            else if (User.IsInRole("instruct"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Lessons" asp-action="Index">Просмотр занятий</a>
+                                </li>
+                          
+                            }
+                            else if (User.IsInRole("Student"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Lessons" asp-action="Index">Просмотр занятий</a>
+                                </li>
+                               
+                            }
+                            <div class="navbar-collapse collapse d-sm-inline-flex">
+                                <ul class="navbar-nav flex-grow-1">
+                                    <li class="nav-item ml-auto">
+                                        <span class="nav-link text-dark">Добро пожаловать, @User.Identity.Name!</span>
+                                    </li>
+                                    <li class="nav-item ml-auto">
+                                        <form method="post" asp-controller="Account" asp-action="Logout" class="d-inline">
+                                            <button type="submit" class="btn btn-link">Выход</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1>Без прав и точка</h1>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; by Lavrov Ilya - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/popper.js/dist/umd/popper.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

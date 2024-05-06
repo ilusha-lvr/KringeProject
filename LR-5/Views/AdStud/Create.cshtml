@@ -1,0 +1,88 @@
+﻿@model LR_5.Models.StudCreateViewModel
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .display-4 {
+        color: #007bff;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+</style>
+<h1>Создать студента</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="InstId">Инструктор</label>
+        <select asp-for="InstId" class="form-control">
+            @foreach (var инструктор in ViewBag.Instructors as List<Instruct>)
+            {
+                <option value="@инструктор.InstId">@инструктор.SurnameI @инструктор.NameI @инструктор.Otchestvo</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CatId">Категория</label>
+        <select asp-for="CatId" class="form-control">
+            @foreach (var категория in ViewBag.Categories as List<Category>)
+            {
+                <option value="@категория.CatId">@категория.NameC</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Surname">Фамилия</label>
+        <input asp-for="Surname" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NameS">Имя</label>
+        <input asp-for="NameS" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Otchestvo">Отчество</label>
+        <input asp-for="Otchestvo" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateS">Дата начала обучения</label>
+        <input asp-for="DateS" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateE">Дата окончания обучения</label>
+        <input asp-for="DateE" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Exam">Экзамен</label>
+        <input asp-for="Exam" type="checkbox" class="form-check-input" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Добавить ученика</button>
+</form>

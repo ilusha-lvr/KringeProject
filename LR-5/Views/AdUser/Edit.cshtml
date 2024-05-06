@@ -1,0 +1,128 @@
+﻿@model LR_5.Models.CreateUserViewModel
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .display-4 {
+        color: #007bff;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+</style>
+
+<h1 class="display-4">Редактировать пользователя</h1>
+
+<form asp-action="Edit" method="post" class="container">
+    <input type="hidden" asp-for="UserId" />
+
+    <div class="form-group">
+        <label asp-for="Username">Имя пользователя</label>
+        <input asp-for="Username" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password">Пароль</label>
+        <input asp-for="Password" class="form-control" type="text" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Role">Роль</label>
+        <input asp-for="Role" class="form-control" readonly />
+    </div>
+
+
+    <div class="form-group" id="instructorFields" style="display:none;">
+        <label asp-for="InstructorId">Инструктор</label>
+        <select asp-for="InstructorId" class="form-control">
+            @foreach (var instructor in ViewBag.Instructors as List<Instruct>)
+            {
+                <option value="@instructor.InstId">@instructor.SurnameI @instructor.NameI @instructor.Otchestvo</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group" id="userFields" style="display:none;">
+        <label asp-for="StudentId">Студент</label>
+        <select asp-for="StudentId" class="form-control">
+            @foreach (var student in ViewBag.Students as List<Stud>)
+            {
+                var fullName = $"{student.Surname} {student.NameS} {student.Otchestvo}";
+                <option value="@student.StudId"
+                        data-username="@student.NameS"
+                        data-usersurname="@student.Surname">
+                    @fullName
+                </option>
+            }
+        </select>
+
+        <input asp-for="UsName" class="form-control" />
+        <input asp-for="UserSurname" class="form-control" />
+    </div>
+
+    <div class="form-group" id="adminFields" style="display:none;">
+        <label asp-for="AdminSurname">Фамилия</label>
+        <input asp-for="AdminSurname" class="form-control" />
+
+        <label asp-for="AdminName">Имя</label>
+        <input asp-for="AdminName" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+</form>
+<div class="text-danger">
+    <ul>
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <li>@error.ErrorMessage</li>
+        }
+    </ul>
+</div>
+<script>
+    // JavaScript для отображения/скрытия дополнительных полей в зависимости от выбранной роли
+    document.getElementById('roleSelect').addEventListener('change', function () {
+        var instructorFields = document.getElementById('instructorFields');
+        var adminFields = document.getElementById('adminFields');
+        var userFields = document.getElementById('userFields');
+
+        if (this.value === 'instruct') {
+            instructorFields.style.display = 'block';
+            adminFields.style.display = 'none';
+            userFields.style.display = 'none';
+        } else if (this.value === 'admin') {
+            instructorFields.style.display = 'none';
+            adminFields.style.display = 'block';
+            userFields.style.display = 'none';
+        } else if (this.value === 'user') {
+            instructorFields.style.display = 'none';
+            adminFields.style.display = 'none';
+            userFields.style.display = 'block';
+        } else {
+            instructorFields.style.display = 'none';
+            adminFields.style.display = 'none';
+            userFields.style.display = 'none';
+        }
+    });
+</script>

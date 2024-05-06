@@ -1,0 +1,120 @@
+﻿@model LR_5.Models.InstructCreateViewModel
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .display-4 {
+        color: #007bff;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+</style>
+<h1 class="display-4">Редактировать инструктора</h1>
+
+<form asp-action="Edit" method="post" class="container">
+    <div class="form-group">
+        <label asp-for="SurnameI">Фамилия</label>
+        <input asp-for="SurnameI" class="form-control" />
+        <span asp-validation-for="SurnameI" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NameI">Имя</label>
+        <input asp-for="NameI" class="form-control" />
+        <span asp-validation-for="NameI" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Otchestvo">Отчество</label>
+        <input asp-for="Otchestvo" class="form-control" />
+        <span asp-validation-for="Otchestvo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Gender">Пол</label>
+        <select id="genderSelect" class="form-control">
+            <option value="М">М</option>
+            <option value="Ж">Ж</option>
+        </select>
+        <input type="hidden" asp-for="Gender" id="genderHidden" />
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateB">Дата рождения</label>
+        <input asp-for="DateB" type="date" class="form-control" />
+        <span asp-validation-for="DateB" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="City">Город</label>
+        <input asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Street">Улица</label>
+        <input asp-for="Street" class="form-control" />
+        <span asp-validation-for="Street" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="House">Дом</label>
+        <input asp-for="House" class="form-control" />
+        <span asp-validation-for="House" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Flat">Квартира</label>
+        <input asp-for="Flat" class="form-control" />
+        <span asp-validation-for="Flat" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PassNom">Номер паспорта</label>
+        <input asp-for="PassNom" class="form-control" />
+        <span asp-validation-for="PassNom" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PassSerial">Серия паспорта</label>
+        <input asp-for="PassSerial" class="form-control" />
+        <span asp-validation-for="PassSerial" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+</form>
+@section scripts {
+    <script>
+        // Обработчик события изменения выпадающего списка
+        document.getElementById('genderSelect').addEventListener('change', function () {
+            // Установка значения скрытого поля в зависимости от выбранного значения
+            document.getElementById('genderHidden').value = this.value;
+        });
+
+        // Установка начального значения при загрузке формы
+        document.getElementById('genderHidden').value = document.getElementById('genderSelect').value;
+    </script>
+}

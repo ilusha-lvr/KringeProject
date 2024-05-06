@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Authentication.Cookies
+
+@{
+    var isAuthenticated = Context.User.Identity.IsAuthenticated;
+}
+
+@if (isAuthenticated)
+{
+    <span>Добро пожаловать, @Context.User.Identity.Name!</span>
+    <form method="post" asp-controller="Account" asp-action="Logout" class="d-inline">
+        <button type="submit" class="btn btn-link">Выход</button>
+    </form>
+}
+else
+{
+    <a href="/Account/Login">Вход</a>
+}
